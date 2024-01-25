@@ -1,8 +1,46 @@
-.App {
-  color : red ;
-  transition: 2s;
+.body {
+    margin: 0;
+    padding: 0;
 }
 
-.App h1:hover {
-  color : blue ;
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    color: #fff;
+}
+
+header button {
+  background-image: linear-gradient(to right, #8323FF, #FF2DAF);
+    border : none ;
+    border-radius: 7px;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+    
+}
+
+header button:hover {
+    background-image: linear-gradient(to right, red, #8323FF);
+    padding: 13px 26px;
+    border-radius: 10px;
+}
+
+
+header button:active {
+    background-image: linear-gradient(to right, red, #8323FF);
+    padding: 20px 28px;
+    border-radius: 10px;
+}
+
+.series {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
