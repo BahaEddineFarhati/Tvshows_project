@@ -13,11 +13,11 @@ function comp(props){
 
 
     const handleIncreaseProgress = () => {
-        setProgressPercentage((prevPercentage) => Math.min(prevPercentage + 10, 100));
+        setProgressPercentage((prevPercentage) => Math.min(prevPercentage + 1, 16));
       };
     
       const handleDecreaseProgress = () => {
-        setProgressPercentage((prevPercentage) => Math.max(prevPercentage - 10, 0));
+        setProgressPercentage((prevPercentage) => Math.max(prevPercentage - 1, 16));
       };
 
 
@@ -28,9 +28,9 @@ function comp(props){
             <div className='image_container' onClick={handleIncreaseProgress}>
                 <img src={props.props.img} alt="film_image" />
                 <h3 className='play'>▶ Next Episode</h3>
-                <ProgressBar percentage={progressPercentage} />
+                <ProgressBar percentage={(progressPercentage/16)*100} />
                 <div className='progress'>
-                    <h2><span class="bold-text">Saison</span> 1 <span class="bold-text">Ep</span> 7</h2>
+                    <h2><span class="bold-text">Saison</span> 1 <span class="bold-text">Ep</span> {progressPercentage}</h2>
                 </div>  
             </div>  
         </div>
